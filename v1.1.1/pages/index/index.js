@@ -4,7 +4,6 @@ const plugin = requirePlugin('WechatSI');
 
 var history = new Array(); //与连续输入有关 
 var i = 0;//与连续输入有关 
-
 var translation = [];
 
 Page({
@@ -16,101 +15,122 @@ Page({
     bt5: 'buttonNormal',
     bt6: 'buttonNormal',
     bt6: 'buttonNormal',
-    content: '请点击按钮',//内容
+    content1: '请点击按钮',//内容
     src: '', //语音插件相关
     read: '',//朗读出的内容
     matchnum:0,//重要数据
+    pah:''
   },
 
   translate: function (e) {
-
+   
     switch (this.data.matchnum) {
       //声母表二进制数对应
-      case 3:this.setData({ content: 'b' }); break;
-      case 15: this.setData({ content: 'p' }); break;
-      case 13: this.setData({ content: 'm' }); break;
-      case 11: this.setData({ content: 'f' }); break;
-      case 25: this.setData({ content: 'd' }); break;
-      case 30: this.setData({ content: 't' }); break;
-      case 29: this.setData({ content: 'n' }); break;
-      case 7: this.setData({ content: 'l' }); break;
-      case 27: this.setData({ content: 'g' }); break;
-      case 5: this.setData({ content: 'k(q)' }); break;
-      case 19: this.setData({ content: 'h(x)' }); break;
-      case 12: this.setData({ content: 'zh' }); break;
-      case 31: this.setData({ content: 'ch' }); break;
-      case 49: this.setData({ content: 'sh' }); break;
-      case 26: this.setData({ content: 'r' }); break;
-      case 53: this.setData({ content: 'z' }); break;
-      case 9: this.setData({ content: 'c' }); break;
-      case 14: this.setData({ content: 's' }); break;
+      case 3:this.setData({ content1: 'b' }); break;
+      case 15: this.setData({ content1: 'p' }); break;
+      case 13: this.setData({ content1: 'm' }); break;
+      case 11: this.setData({ content1: 'f' }); break;
+      case 25: this.setData({ content1: 'd' }); break;
+      case 30: this.setData({ content1: 't' }); break;
+      case 29: this.setData({ content1: 'n' }); break;
+      case 7: this.setData({ content1: 'l' }); break;
+      case 27: this.setData({ content1: 'g' }); break;
+      case 5: this.setData({ content1: 'k(q)' }); break;
+      case 19: this.setData({ content1: 'h(x)' }); break;
+      case 12: this.setData({ content1: 'zh' }); break;
+      case 31: this.setData({ content1: 'ch' }); break;
+      case 49: this.setData({ content1: 'sh' }); break;
+      case 26: this.setData({ content1: 'r' }); break;
+      case 53: this.setData({ content1: 'z' }); break;
+      case 9: this.setData({ content1: 'c' }); break;
+      case 14: this.setData({ content1: 's' }); break;
       
       //韵母表二进制数对应
-      case 20: this.setData({ content: 'a' }); break;
-      case 34: this.setData({ content: 'e' }); break;
-      case 10: this.setData({ content: 'i' }); break;
-      case 44: this.setData({ content: 'ü' }); break;
-      case 37: this.setData({ content: 'u' }); break;
-      case 23: this.setData({ content: 'er' }); break;
-      case 42: this.setData({ content: 'ai' }); break;
-      case 22: this.setData({ content: 'ao' }); break;
-      case 46: this.setData({ content: 'ei' }); break;
-      case 55: this.setData({ content: 'ou' }); break;
-      case 43: this.setData({ content: 'ia' }); break;
-      case 28: this.setData({ content: 'iao' }); break;
-      case 17: this.setData({ content: 'ie' }); break;
-      case 51: this.setData({ content: 'iou' }); break;
-      case 63: this.setData({ content: 'ua' }); break;
-      case 61: this.setData({ content: 'uai' }); break;
-      case 58: this.setData({ content: 'ui' }); break;
-      case 21: this.setData({ content: 'uo' }); break;
-      case 62: this.setData({ content: 'üe' }); break;
-      case 39: this.setData({ content: 'an' }); break;
-      case 38: this.setData({ content: 'ang' }); break;
-      case 52: this.setData({ content: 'en' }); break;
-      case 60: this.setData({ content: 'eng' }); break;
-      case 41: this.setData({ content: 'ian' }); break;
-      case 45: this.setData({ content: 'iang' }); break;
-      case 35: this.setData({ content: 'in' }); break;
-      case 33: this.setData({ content: 'ing' }); break;
-      case 59: this.setData({ content: 'uan' }); break;
-      case 54: this.setData({ content: 'uang' }); break;
-      case 18: this.setData({ content: 'uen' }); break;
-      case 50: this.setData({ content: 'ong' }); break;
-      case 47: this.setData({ content: 'üan' }); break;
-      case 52: this.setData({ content: 'ün' }); break;
-      case 57: this.setData({ content: 'iong' }); break;
+      case 20: this.setData({ content1: 'a' }); break;
+      case 34: this.setData({ content1: 'e' }); break;
+      case 10: this.setData({ content1: 'i' }); break;
+      case 44: this.setData({ content1: 'ü' }); break;
+      case 37: this.setData({ content1: 'u' }); break;
+      case 23: this.setData({ content1: 'er' }); break;
+      case 42: this.setData({ content1: 'ai' }); break;
+      case 22: this.setData({ content1: 'ao' }); break;
+      case 46: this.setData({ content1: 'ei' }); break;
+      case 55: this.setData({ content1: 'ou' }); break;
+      case 43: this.setData({ content1: 'ia' }); break;
+      case 28: this.setData({ content1: 'iao' }); break;
+      case 17: this.setData({ content1: 'ie' }); break;
+      case 51: this.setData({ content1: 'iou' }); break;
+      case 63: this.setData({ content1: 'ua' }); break;
+      case 61: this.setData({ content1: 'uai' }); break;
+      case 58: this.setData({ content1: 'ui' }); break;
+      case 21: this.setData({ content1: 'uo' }); break;
+      case 62: this.setData({ content1: 'üe' }); break;
+      case 39: this.setData({ content1: 'an' }); break;
+      case 38: this.setData({ content1: 'ang' }); break;
+      case 52: this.setData({ content1: 'en' }); break;
+      case 60: this.setData({ content1: 'eng' }); break;
+      case 41: this.setData({ content1: 'ian' }); break;
+      case 45: this.setData({ content1: 'iang' }); break;
+      case 35: this.setData({ content1: 'in' }); break;
+      case 33: this.setData({ content1: 'ing' }); break;
+      case 59: this.setData({ content1: 'uan' }); break;
+      case 54: this.setData({ content1: 'uang' }); break;
+      case 18: this.setData({ content1: 'uen' }); break;
+      case 50: this.setData({ content1: 'ong' }); break;
+      case 47: this.setData({ content1: 'üan' }); break;
+      case 52: this.setData({ content1: 'ün' }); break;
+      case 57: this.setData({ content1: 'iong' }); break;
 
-      case 1: this.setData({ content: '1声' }); break;
-      case 2: this.setData({ content: '2声' }); break;
-      case 4: this.setData({ content: '3声' }); break;
-      case 6: this.setData({ content: '4声' }); break;
+      case 1: this.setData({ content1: '1声' }); break;
+      case 2: this.setData({ content1: '2声' }); break;
+      case 4: this.setData({ content1: '3声' }); break;
+      case 6: this.setData({ content1: '4声' }); break;
 
      
-      default: this.setData({ content: ' ' }); break;
+      default: this.setData({ content1: ' ' }); break;
     }
 
     //连续输入的代码 
-    history[i] = this.data.content;
+    history[i] = this.data.content1;
     this.setData({ matchnum: 0 })
     // console.log(history[i - 1])   //有需要可开启
     i++
     // console.log(i) //有需要可开启
-    this.setData({ content: history })  
+    this.setData({ content1: history })  
   },
 
-  //清除所用按钮功能，text中的{{content}}为空
-  deleteData: function(){
-    var that = this
-    wx.setStorage({
-      key: 'name',
-      data: that.data.content
+  //清除所用按钮功能，text中的{{content1}}为空
+  deleteData: function () {
+    //检查基础库版本
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+    } else {
+      wx.cloud.init({
+        traceUser: true,
       })
-    this.setData({ content: "" });//text中的{ { content } } 为空 
+    }//保存this变量
+    var that = this;
+    //调用云函数
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'uplode',
+      // 传给云函数的参数
+      data: {
+        content:that.data.content1,
+        tag: 1
+      },
+      //success函数为调用成功后的回调函数
+      success: function (res) {
+        console.log(res.result)
+      },
+      //fail函数为调用失败后的回调函数
+      fail: console.error
+
+    })
+    this.setData({ content1: "" });//text中的{ { content1 } } 为空 
     console.log(history);//控制台监控 //history = [],清空为空数组; 
     history.length = 0;
-    i = 0
-       
+    i = 0   
   },
 
   change: function (buttonid) {   //关于按钮的函数，按钮按下matchnum + 2^n
@@ -214,7 +234,7 @@ Page({
   // 手动输入内容
   conInput: function (e) {
     this.setData({
-      content: e.detail.value,
+      content1: e.detail.value,
     })
   },
   
@@ -263,7 +283,7 @@ Page({
     plugin.textToSpeech({
       lang: "zh_CN",
       tts: true,
-      content: c,
+      content1: c,
       success: function (res) {
         console.log(res);
         console.log("succ tts", res.filename);
@@ -294,17 +314,30 @@ Page({
   end: function (e) {
     this.innerAudioContext.pause();//暂停音频
   },
+  
+  histor:function(){
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+    } else {
+      wx.cloud.init({
+        traceUser: true,
+      })
+    } //保存this变量
+    var _this = this;
+    //调用云函数
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'downlode',
+      // 传给云函数的参数
+      data: {
+        tag: 1
+      }, //success函数为调用成功后的回调函数
+      success: function (res) {
+        console.log(res.result)
+        _this.setData({
+          pah: res.result.data[0].content  //设置record值，显示在页面上。setData函数会触发页面的重新渲染
+        })
+  }
 
-//历史记录
-  history: function () 
-  {
-    var that = this;
-    wx.getStorage({
-      key: 'name',
-      success(res) {
-        that.setData({ content: res.data })
-      },
-//把这个代码插入到随便一个地方是调取历史记录，history是按钮bindtap，my是要在主页面上展示的内容
-      }) 
-    }
-  })
+})
+ } })

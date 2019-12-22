@@ -1,6 +1,6 @@
  <view> 
   <view class="output">
-    <text >{{content}}</text>
+    <text >{{content1}}</text>
   </view>
 
   <view class="group11" >
@@ -17,6 +17,8 @@
   <view class="fbt">
   <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="translate">翻译</button>
   <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="readout">朗读</button>
-  <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="deleteData">清除</button> 
+  <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="deleteData">清除</button>
+  <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="histor">历史记录</button> 
   </view>
+<view class="output">{{pah}}</view>
 </view>
