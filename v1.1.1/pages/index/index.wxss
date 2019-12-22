@@ -1,0 +1,73 @@
+.group11{
+  width: 750rpx;
+  height: 500rpx;
+  margin-top: 50rpx;
+  margin-left: 13%;
+  
+  
+}
+.buttonNormal{
+  width:20%;
+  height:30%;
+  background-color: white;
+  color: white;
+  border:20rpx #C4C4C4 inset;
+  border-radius:99rpx;
+  margin-left: 13%;
+
+}
+.buttonLocked{
+  
+  width:20%;
+  height:30%;
+  color: gray;
+  background-color: grey;
+  border-radius:100rpx;
+  margin-left: 13%;
+
+  border:20rpx #C4C4C4 outset
+
+}
+
+.push{
+  width: 80%;
+  margin-top: 10rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  margin-left: 140rpx;
+  box-shadow:0px 0px 15px gray inset;
+}
+
+.fbt{
+  width: 650rpx;
+
+  margin-top:  20rpx;
+  margin-left: 8%;
+  margin-right: 10%;
+ 
+}
+
+.fbte{
+  width: 80%;
+  margin-top: 10rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 100rpx;
+  
+}
+
+ 
+
+.output{
+  align-items: center;
+  justify-content: center;
+  border: 10rpx black solid;
+  margin-top: 20rpx;
+  margin-left: 10%;
+  width: 80%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 40px; 
+}

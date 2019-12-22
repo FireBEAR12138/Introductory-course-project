@@ -1,0 +1,22 @@
+ <view> 
+  <view class="output">
+    <text >{{content}}</text>
+  </view>
+
+  <view class="group11" >
+    <button size="mini" class="{{eachButton}} {{bt1}}" bindtap="eachButton"  id="bt1" >000</button>
+    <button size="mini" class="{{eachButton}} {{bt4}}" bindtap="eachButton"  id="bt4" >000</button>
+    <view></view>
+    <button size="mini" class="{{eachButton}} {{bt2}}" bindtap="eachButton"  id="bt2" >000</button>
+    <button size="mini" class="{{eachButton}} {{bt5}}" bindtap="eachButton"  id="bt5" >000</button>
+    <view></view>
+    <button size="mini" class="{{eachButton}} {{bt3}}" bindtap="eachButton"  id="bt3" >000</button>
+    <button size="mini" class="{{eachButton}} {{bt6}}" bindtap="eachButton"  id="bt6" >000</button>
+    </view>
+
+  <view class="fbt">
+  <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="translate">翻译</button>
+  <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="readout">朗读</button>
+  <button class="fbte" hover-class="push" hover-stay-time="80" bindtap="deleteData">清除</button> 
+  </view>
+</view>
