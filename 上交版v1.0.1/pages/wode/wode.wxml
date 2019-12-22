@@ -1,0 +1,85 @@
+<input class="shuru" placeholder="请输入要翻译的汉字" bindinput="fanyi"></input>
+<button type="default"bindtap="diaoyong"> 翻译</button>
+<view>
+<swiper indicator-dots class="swiper-item">
+<swiper-item class='swiper-item'>
+<view wx:if="{{a=='b'}}"><image src="../../image/b.png"></image></view>
+<view wx:if="{{a=='c'}}"><image src="../../image/c.png"></image></view>
+<view wx:if="{{a=='ch'}}"><image src="../../image/ch.png"></image></view>
+<view wx:if="{{a=='f'}}"><image src="../../image/f.png"></image></view>
+<view wx:if="{{(a=='g')||(a=='j')}}"><image src="../../image/g j.png"></image></view>
+<view wx:if="{{(a=='h')||(a=='x')}}"><image src="../../image/h x.png"></image></view>
+<view wx:if="{{(a=='k')||(a=='q')}}"><image src="../../image/k q.png"></image></view>
+<view wx:if="{{a=='m'}}"><image src="../../image/m.png"></image></view>
+<view wx:if="{{a=='n'}}"><image src="../../image/n.png"></image></view>
+<view wx:if="{{a=='p'}}"><image src="../../image/p.png"></image></view>
+<view wx:if="{{a=='r'}}"><image src="../../image/r.png"></image></view>
+<view wx:if="{{a=='s'}}"><image src="../../image/s.png"></image></view>
+<view wx:if="{{a=='sh'}}"><image src="../../image/sh.png"></image></view>
+<view wx:if="{{a=='t'}}"><image src="../../image/t.png"></image></view>
+<view wx:if="{{a=='z'}}"><image src="../../image/z.png"></image></view>
+<view wx:if="{{a=='zh'}}"><image src="../../image/zh.png"></image></view>
+<view wx:if="{{a=='l'}}"><image src="../../image/l.png"></image></view>
+</swiper-item>
+<swiper-item class='swiper-item'>
+<view wx:if="{{(b=='a')&&(a!='w')&&(a!='y')}}"><image src="../../image/a.png"></image></view>
+<view wx:if="{{(b=='ai')&&(a!='w')&&(a!='y')}}"><image src="../../image/ai.png"></image></view>
+<view wx:if="{{(b=='ai')&&(a=='w')}}"><image src="../../image/uai.png"></image></view>
+<view wx:if="{{(b=='uai')}}"><image src="../../image/uai.png"></image></view>
+<view wx:if="{{(b=='a')&&(a=='y')}}"><image src="../../image/ia.png"></image></view>
+<view wx:if="{{(b=='a')&&(a=='w')}}"><image src="../../image/ua.png"></image></view>
+<view wx:if="{{(b=='ua')}}"><image src="../../image/ua.png"></image></view>
+<view wx:if="{{(b=='ao')&&(a=='y')}}"><image src="../../image/iao.png"></image></view>
+<view wx:if="{{(b=='iao')}}"><image src="../../image/iao.png"></image></view>
+<view wx:if="{{(b=='ao')&&(a!='y')}}"><image src="../../image/ao.png"></image></view>
+<view wx:if="{{((b=='o')||(b=='e'))&&(a!='w')&&(a!='y')}}"><image src="../../image/e o.png"></image></view>
+<view wx:if="{{(b=='o')&&(a=='w')}}"><image src="../../image/uo.png"></image></view>
+<view wx:if="{{(b=='uo')&&(a!='y')}}"><image src="../../image/uo.png"></image></view>
+<view wx:if="{{(b=='uo')&&(a=='y')}}"><image src="../../image/iuo.png"></image></view>
+<view wx:if="{{(b=='e')&&(a=='y')}}"><image src="../../image/ie.png"></image></view>
+<view wx:if="{{(b=='ie')}}"><image src="../../image/ie.png"></image></view>
+<view wx:if="{{(b=='i')&&(a!='zh')&&(a!='ch')&&(a!='sh')&&(a!='r')&&(a!='z')&&(a!='c')&&(a!='s')}}"><image src="../../image/i.png"></image></view>
+<view wx:if="{{(b=='er')}}"><image src="../../image/er.png"></image></view>
+<view wx:if="{{(b=='ei')&&(a=='w')}}"><image src="../../image/uei.png"></image></view>
+<view wx:if="{{(b=='ei')&&(a!='w')}}"><image src="../../image/ei.png"></image></view>
+<view wx:if="{{(b=='uei')}}"><image src="../../image/uei.png"></image></view>
+<view wx:if="{{(b=='ou')&&(a=='y')}}"><image src="../../image/iou.png"></image></view>
+<view wx:if="{{(b=='ou')&&(a!='y')}}"><image src="../../image/ou.png"></image></view>
+<view wx:if="{{(b=='iou')}}"><image src="../../image/iou.png"></image></view>
+<view wx:if="{{(b=='u')&&(a!='y')}}"><image src="../../image/u.png"></image></view>
+<view wx:if="{{(b=='u')&&((a=='y')||(a=='j')||(a=='q')||(a=='x'))}}"><image src="../../image/ü.png"></image></view>
+<view wx:if="{{(b=='v')}}"><image src="../../image/ü.png"></image></view>
+<view wx:if="{{(b=='ue')||(b=='ve')}}"><image src="../../image/yue ve.png"></image></view>
+<view wx:if="{{(b=='an')&&(a!='y')&&(a!='w')}}"><image src="../../image/an.png"></image></view>
+<view wx:if="{{(b=='an')&&(a=='y')}}"><image src="../../image/ian.png"></image></view>
+<view wx:if="{{(b=='ian')}}"><image src="../../image/ian.png"></image></view>
+<view wx:if="{{(b=='an')&&(a=='w')}}"><image src="../../image/uan.png"></image></view>
+<view wx:if="{{(b=='uan')&&((a=='y')||(a=='j')||(a=='q')||(a=='x'))}}"><image src="../../image/yuan van.png"></image></view>
+<view wx:if="{{(b=='uan')&&((a!='y')&&(a!='j')&&(a!='q')&&(a!='x'))}}"><image src="../../image/uan.png"></image></view>
+<view wx:if="{{(b=='ang')&&(a=='w')}}"><image src="../../image/uang.png"></image></view>
+<view wx:if="{{(b=='ang')&&(a!='w')&&(a!='y')}}"><image src="../../image/ang.png"></image></view>
+<view wx:if="{{(b=='ang')&&(a=='y')}}"><image src="../../image/iang.png"></image></view>
+<view wx:if="{{(b=='en')&&(a=='w')}}"><image src="../../image/uen.png"></image></view>
+<view wx:if="{{(b=='un')&&((a!='y')&&(a!='j')&&(a!='q')&&(a!='x'))}}"><image src="../../image/uen.png"></image></view>
+<view wx:if="{{(b=='ian')&&(a!='w')}}"><image src="../../image/en.png"></image></view>
+<view wx:if="{{(b=='eng')&&(a!='w')}}"><image src="../../image/eng.png"></image></view>
+<view wx:if="{{(b=='eng')&&(a=='w')}}"><image src="../../image/ong weng.png"></image></view>
+<view wx:if="{{(b=='ong')&&(a!='y')}}"><image src="../../image/ong weng.png"></image></view>
+<view wx:if="{{(b=='ong')&&(a=='y')}}"><image src="../../image/iong.png"></image></view>
+<view wx:if="{{(b=='un')&&((a=='y')||(a=='j')||(a=='q')||(a=='x'))}}"><image src="../../image/yun vn.png"></image></view>
+<view wx:if="{{(b=='in')}}"><image src="../../image/in.png"></image></view>
+<view wx:if="{{(b=='ing')}}"><image src="../../image/ing.png"></image></view>
+<view wx:if="{{(b=='iu')}}"><image src="../../image/iou.png"></image></view>
+</swiper-item>
+<swiper-item class='swiper-item'>
+<view>
+<view wx:if="{{(c=='1')&&(a!='f')&&((a!='y')&&(b!=i))}}"><image src="../../image/1.png"></image></view>
+<view wx:if="{{(c=='2')&&(a!='p')&&(a!='m')&&(a!='n')&&(a!='h')&&(a!='q')&&(a!='ch')&&(a!='r')&&((a!='t')||((a=='t')&&(b=='ou')))&&(b!=er)}}"><image src="../../image/2.png"></image></view>
+<view wx:if="{{(c=='3')&&((a!='w')&&(b!='o'))&&((a!='y')&&((b!='o')||(b!='e')||(b!=ou)))}}"><image src="../../image/3.png"></image></view>
+<view wx:if="{{(c=='4')&&(a!='b')&&(a!='d')&&(a!='x')&&(a!='g')&&(a!='k')&&(a!='j')&&(a!='zh')&&(a!='sh')&&(a!='s')&&((a!='l')||((a=='l')&&(b=='e')))&&((a!='z')||((a=='z')&&(b=='i')))&&((a!='')||((a=='')&&(b=='er')))&&((a!='w')||((a=='w')&&(b=='o')))&&((a!='y')||((a=='y')&&((b=='i')||(b=='e')||(b=='ou'))))}}"><image src="../../image/4.png"></image></view>
+</view> 
+
+</swiper-item>
+</swiper></view>
+
+

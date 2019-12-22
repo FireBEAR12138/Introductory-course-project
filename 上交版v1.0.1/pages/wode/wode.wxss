@@ -1,0 +1,19 @@
+/* pages/wode/wode.wxss */
+
+.swiper-item{
+  height: 500rpx;
+}
+
+.shuru{
+  align-items: center;
+  justify-content: center;
+  border: 10rpx black solid;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 10%;
+  width: 80%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 40px; 
+}

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wode/wode"
+  ],
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.0",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "盲翻汉",
+        "iconPath": "pages/images/right_arrow.png",
+        "selectedIconPath": "pages/images/right_arrow.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "汉翻盲",
+        "iconPath": "pages/images/left_arrow.png",
+        "selectedIconPath": "pages/images/left_arrow.png"
+      }
+    ]
+  }
+}
